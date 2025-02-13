@@ -1,13 +1,13 @@
-package com.techgalery.consumer;
+package be.craftmine.logichain.shipment;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProducerApplication {
+public class ShipmentApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ProducerApplication.class, args);
+        SpringApplication.run(ShipmentApplication.class, args);
     }
 
 }

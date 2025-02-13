@@ -1,10 +1,10 @@
-package com.techgalery.consumer;
+package be.craftmine.logichain.shipment;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ConsumerApplicationTests {
+class ShipmentApplicationTests {
 
     @Test
     void contextLoads() {
