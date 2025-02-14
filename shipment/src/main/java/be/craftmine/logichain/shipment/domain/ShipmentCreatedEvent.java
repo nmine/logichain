@@ -1,4 +1,4 @@
-package be.craftmine.logichain.shipment.controller;
+package be.craftmine.logichain.shipment.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

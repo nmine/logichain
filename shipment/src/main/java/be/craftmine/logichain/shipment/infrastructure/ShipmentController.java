@@ -1,5 +1,7 @@
-package be.craftmine.logichain.shipment.controller;
+package be.craftmine.logichain.shipment.infrastructure;
 
+import be.craftmine.logichain.shipment.domain.Shipment;
+import be.craftmine.logichain.shipment.service.ShipmentService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

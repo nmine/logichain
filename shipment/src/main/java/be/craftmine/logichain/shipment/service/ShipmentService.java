@@ -1,5 +1,7 @@
-package be.craftmine.logichain.shipment.controller;
+package be.craftmine.logichain.shipment.service;
 
+import be.craftmine.logichain.shipment.domain.Shipment;
+import be.craftmine.logichain.shipment.domain.ShipmentCreatedEvent;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
