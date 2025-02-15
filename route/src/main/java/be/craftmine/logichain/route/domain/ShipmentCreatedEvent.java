@@ -1,8 +1,9 @@
-package be.craftmine.logichain.shipment.domain;
+package be.craftmine.logichain.route.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.io.Serializable;
+
 //To add to shared-kernel
 public class ShipmentCreatedEvent implements Serializable {
     @JsonProperty("shipmentId")
