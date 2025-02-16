@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="shared-kernel" />
+        <module name="carrier" />
         <module name="route" />
         <module name="consumer-service" />
         <module name="producer-service" />
@@ -25,8 +26,9 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="carrier" options="-parameters" />
       <module name="route" options="-parameters" />
-      <module name="shared-kernel" options="-parameters" />
+      <module name="shared-kernel" options="" />
       <module name="shipment" options="-parameters" />
     </option>
   </component>

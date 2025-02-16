@@ -14,6 +14,7 @@
         <option value="$PROJECT_DIR$/route/pom.xml" />
         <option value="$PROJECT_DIR$/shared-kernel/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/carrier/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
