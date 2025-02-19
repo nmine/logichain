@@ -12,6 +12,12 @@ public class ShipmentCreatedEvent implements Serializable {
     @JsonProperty("productId")
     private Long productId;
 
+    public ShipmentCreatedEvent(Long id, String deliveryAddress, Long productId) {
+        this.shipmentId = id;
+        this.deliveryAddress = deliveryAddress;
+        this.productId = productId;
+    }
+
     public void setShipmentId(Long shipmentId) {
         this.shipmentId = shipmentId;
     }

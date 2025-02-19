@@ -10,6 +10,7 @@
         <module name="shared-kernel" />
         <module name="carrier" />
         <module name="route" />
+        <module name="warehouse" />
         <module name="consumer-service" />
         <module name="producer-service" />
       </profile>
@@ -30,6 +31,7 @@
       <module name="route" options="-parameters" />
       <module name="shared-kernel" options="" />
       <module name="shipment" options="-parameters" />
+      <module name="warehouse" options="-parameters" />
     </option>
   </component>
 </project>

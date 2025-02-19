@@ -1,23 +1,8 @@
-package be.craftmine.logichain.shipment.domain;
+package be.craftmine.logichain.shipment.infrastructure;
 
-public class Shipment {
-    private Long id;
+public class ShipmentRequest {
     private String deliveryAddress;
     private Long productId;
-
-    public Shipment(Long id, String deliveryAddress, Long productId) {
-        this.id = id;
-        this.deliveryAddress = deliveryAddress;
-        this.productId = productId;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getDeliveryAddress() {
         return deliveryAddress;
@@ -34,6 +19,4 @@ public class Shipment {
     public void setProductId(Long productId) {
         this.productId = productId;
     }
-
-
 }

@@ -1,3 +1,11 @@
+### **Service Relationships:**
+- **Event-Driven Communication:** Shipment Management -> Route Optimization
+- **Customer-Supplier:** Route Optimization -> Carrier Integration
+- **Partnership:** Shipment Management <-> Warehouse Management
+- **Conformist + ACL:** Carrier Integration adapting to external carrier APIs
+
+**LogiChain** leverages Domain Events with Kafka for asynchronous communication, ensuring scalable, decoupled logistics operations.
+
 # Event-driven Microservices using Spring Boot and Apache Kafka
 This is the full event driven microservice example using spring boot codes with Apache Kafka as messaging broker. You can clone this full code and test it yourself, understand better what microservice event driven software design. Blog post https://www.techgalery.com/2021/07/event-driven-microservice-spring-boot.html
 

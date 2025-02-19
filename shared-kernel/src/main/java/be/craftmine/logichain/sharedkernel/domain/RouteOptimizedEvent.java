@@ -1,9 +1,14 @@
-package be.craftmine.logichain.route.domain;
+package be.craftmine.logichain.sharedkernel.domain;
 
 
 public class RouteOptimizedEvent {
     private Long shipmentId;
     private String optimizedRoute;
+
+    public RouteOptimizedEvent(Long shipmentId, String optimizedRouteDetails) {
+        this.shipmentId = shipmentId;
+        this.optimizedRoute = optimizedRouteDetails;
+    }
 
     public Long getShipmentId() {
         return shipmentId;

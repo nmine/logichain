@@ -1,0 +1,51 @@
+asyncapi: '2.0.0'
+info:
+  title: LogiChain Events
+  version: '1.0.0'
+servers:
+  kafka-broker:
+    url: localhost:9092
+    protocol: kafka
+
+channels:
+  shipment-topic:
+    description: "Event emitted when a shipment is created"
+    publish:
+      operationId: sendShipmentCreatedEvent
+      summary: "Publish ShipmentCreatedEvent"
+      message:
+        contentType: application/json
+        payload:
+          $ref: '#/components/schemas/ShipmentCreatedEvent'
+
+  route-topic:
+    description: "Event emitted when a route is optimized"
+    publish:
+      operationId: sendRouteOptimizedEvent
+      summary: "Publish RouteOptimizedEvent"
+      message:
+        contentType: application/json
+        payload:
+          $ref: '#/components/schemas/RouteOptimizedEvent'
+
+components:
+  schemas:
+    ShipmentCreatedEvent:
+      type: object
+      properties:
+        shipmentId:
+          type: integer
+        deliveryAddress:
+          type: string
+        productId:
+          type: integer
+        status:
+          type: string
+
+    RouteOptimizedEvent:
+      type: object
+      properties:
+        shipmentId:
+          type: integer
+        optimizedRoute:
+          type: string

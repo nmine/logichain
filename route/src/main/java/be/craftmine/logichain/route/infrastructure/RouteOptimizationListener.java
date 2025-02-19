@@ -1,6 +1,6 @@
 package be.craftmine.logichain.route.infrastructure;
 
-import be.craftmine.logichain.route.domain.RouteOptimizedEvent;
+import be.craftmine.logichain.sharedkernel.domain.RouteOptimizedEvent;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
@@ -19,6 +19,7 @@ public class RouteOptimizationListener {
     @KafkaListener(topics = "shipment-topic", groupId = "route-optimization-group")
     public void onShipmentCreated(ShipmentCreatedEvent event) {
         // Optimize route and publish event
-        kafkaTemplate.send("route-topic", new RouteOptimizedEvent());
+        RouteOptimizedEvent routeEvent = new RouteOptimizedEvent(event.getShipmentId(), "OptimizedRouteDetails");
+        kafkaTemplate.send("route-topic", routeEvent);
     }
 }

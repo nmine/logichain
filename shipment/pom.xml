@@ -30,6 +30,12 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+
+        <dependency>
+            <groupId>be.craftmine.logichain</groupId>
+            <artifactId>shared-kernel</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -39,10 +45,6 @@
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka-test</artifactId>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>be.craftmine.logichain</groupId>
-            <artifactId>shared-kernel</artifactId>
         </dependency>
     </dependencies>
 
@@ -72,6 +74,34 @@
                     </excludes>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <executable>docker</executable>
+                    <arguments>
+                        <argument>run</argument>
+                        <argument>--rm</argument>
+                        <argument>-v</argument>
+                        <argument>${project.basedir}:/app</argument>
+                        <argument>asyncapi/generator</argument>
+                        <argument>/app/src/main/resources/asyncapi.yaml</argument>
+                        <argument>@asyncapi/java-spring-cloud-stream-template</argument>
+                        <argument>-o</argument>
+                        <argument>/app/target/generated-sources/events</argument>
+                    </arguments>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 
