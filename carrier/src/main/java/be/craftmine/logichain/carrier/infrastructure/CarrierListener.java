@@ -1,6 +1,5 @@
 package be.craftmine.logichain.carrier.infrastructure;
 
-import be.craftmine.logichain.sharedkernel.domain.RouteOptimizedEvent;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 

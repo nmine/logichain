@@ -1,6 +1,5 @@
 package be.craftmine.logichain.warehouse.infrastructure;
 
-import be.craftmine.logichain.sharedkernel.domain.ShipmentCreatedEvent;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
