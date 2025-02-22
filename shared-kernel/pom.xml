@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>be.craftmine.logichain</groupId>
+    <artifactId>shared-kernel</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>shared-kernel</name>
+    <description>shared-kernel</description>
+
+    <properties>
+        <java.version>23</java.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.18.2</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.github.zenwave360.zenwave-sdk</groupId>
+                <artifactId>zenwave-sdk-maven-plugin</artifactId>
+                <version>1.6.5</version>
+                <executions>
+                    <execution>
+                        <id>generate-asyncapi</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <generatorName>jsonschema2pojo</generatorName>
+                            <inputSpec>${project.basedir}/src/main/resources/asyncapi/contract.yaml
+                            </inputSpec>
+                            <configOptions>
+                                <modelPackage>be.craftmine.logichain.sharedkernel.domain.events</modelPackage>
+                                <jsonschema2pojo.includeTypeInfo>true</jsonschema2pojo.includeTypeInfo>
+                                <jsonschema2pojo.includeJsr303Annotations>false
+                                </jsonschema2pojo.includeJsr303Annotations>
+                                <jsonschema2pojo.dateTimeType>java.time.LocalDateTime</jsonschema2pojo.dateTimeType>
+                            </configOptions>
+                        </configuration>
+                    </execution>
+                </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>io.github.zenwave360.zenwave-sdk.plugins</groupId>
+                        <artifactId>asyncapi-jsonschema2pojo</artifactId>
+                        <version>1.3.1</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>io.github.zenwave360.zenwave-sdk.plugins</groupId>
+                        <artifactId>asyncapi-spring-cloud-streams3</artifactId>
+                        <version>1.3.1</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+</project>
