@@ -37,7 +37,11 @@
         </dependency>
         <dependency>
             <groupId>be.craftmine.logichain</groupId>
-            <artifactId>shared-kernel</artifactId>
+            <artifactId>route-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>be.craftmine.logichain</groupId>
+            <artifactId>shipment-api</artifactId>
         </dependency>
     </dependencies>
 

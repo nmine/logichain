@@ -17,12 +17,15 @@
         <option value="$PROJECT_DIR$/carrier/pom.xml" />
         <option value="$PROJECT_DIR$/warehouse/pom.xml" />
         <option value="$PROJECT_DIR$/../../spw/asyncapi-example-main/pom.xml" />
+        <option value="$PROJECT_DIR$/shipment-api/pom.xml" />
+        <option value="$PROJECT_DIR$/route-api/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/consumer-service/pom.xml" />
         <option value="$PROJECT_DIR$/producer-service/pom.xml" />
+        <option value="$PROJECT_DIR$/shared-kernel/pom.xml" />
       </set>
     </option>
   </component>

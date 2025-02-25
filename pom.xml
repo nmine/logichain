@@ -16,15 +16,23 @@
     </properties>
     <packaging>pom</packaging>
     <modules>
-        <module>shared-kernel</module>
+        <module>route-api</module>
+        <module>shipment-api</module>
         <module>shipment</module>
+        <module>route</module>
         <module>carrier</module>
+        <module>warehouse</module>
     </modules>
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>be.craftmine.logichain</groupId>
-                <artifactId>shared-kernel</artifactId>
+                <artifactId>route-api</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>be.craftmine.logichain</groupId>
+                <artifactId>shipment-api</artifactId>
                 <version>1.0.0-SNAPSHOT</version>
             </dependency>
         </dependencies>

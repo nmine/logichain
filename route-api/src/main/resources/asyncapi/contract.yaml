@@ -1,0 +1,29 @@
+asyncapi: 3.0.0
+info:
+  title: LogiChain Events
+  version: 1.0.0
+channels:
+  route-topic:
+    address: route-topic
+    messages:
+      sendRouteOptimizedEvent.message:
+        payload:
+          $ref: '#/components/schemas/RouteOptimizedEvent'
+    description: Event emitted when a route is optimized
+operations:
+  sendRouteOptimizedEvent:
+    action: receive
+    channel:
+      $ref: '#/channels/route-topic'
+    summary: Publish RouteOptimizedEvent
+    messages:
+      - $ref: '#/channels/route-topic/messages/sendRouteOptimizedEvent.message'
+components:
+  schemas:
+    RouteOptimizedEvent:
+      type: object
+      properties:
+        shipmentId:
+          type: integer
+        optimizedRoute:
+          type: string

@@ -10,13 +10,6 @@ channels:
         payload:
           $ref: '#/components/schemas/ShipmentCreatedEvent'
     description: Event emitted when a shipment is created
-  route-topic:
-    address: route-topic
-    messages:
-      sendRouteOptimizedEvent.message:
-        payload:
-          $ref: '#/components/schemas/RouteOptimizedEvent'
-    description: Event emitted when a route is optimized
 operations:
   sendShipmentCreatedEvent:
     action: receive
@@ -25,13 +18,6 @@ operations:
     summary: Publish ShipmentCreatedEvent
     messages:
       - $ref: '#/channels/shipment-topic/messages/sendShipmentCreatedEvent.message'
-  sendRouteOptimizedEvent:
-    action: receive
-    channel:
-      $ref: '#/channels/route-topic'
-    summary: Publish RouteOptimizedEvent
-    messages:
-      - $ref: '#/channels/route-topic/messages/sendRouteOptimizedEvent.message'
 components:
   schemas:
     ShipmentCreatedEvent:
@@ -44,11 +30,4 @@ components:
         productId:
           type: integer
         status:
-          type: string
-    RouteOptimizedEvent:
-      type: object
-      properties:
-        shipmentId:
-          type: integer
-        optimizedRoute:
           type: string

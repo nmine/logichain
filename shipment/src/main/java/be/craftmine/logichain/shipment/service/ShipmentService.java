@@ -1,10 +1,10 @@
 package be.craftmine.logichain.shipment.service;
 
 import be.craftmine.logichain.shipment.domain.Shipment;
+import be.craftmine.logichain.shipment.domain.events.ShipmentCreatedEvent;
 import be.craftmine.logichain.shipment.infrastructure.ShipmentRequest;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
-import be.craftmine.logichain.sharedkernel.domain.events.ShipmentCreatedEvent;
 import java.util.UUID;
 
 @Service

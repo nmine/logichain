@@ -11,9 +11,10 @@
         <module name="route" />
         <module name="asyncapi-example" />
         <module name="producer-service" />
-        <module name="shared-kernel" />
+        <module name="route-api" />
         <module name="warehouse" />
         <module name="consumer-service" />
+        <module name="shipment-api" />
       </profile>
       <profile name="Annotation profile for root" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -25,13 +26,18 @@
         <module name="shipment" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="shared-kernel" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="carrier" options="-parameters" />
       <module name="route" options="-parameters" />
+      <module name="route-api" options="-parameters" />
       <module name="shared-kernel" options="" />
       <module name="shipment" options="-parameters" />
+      <module name="shipment-api" options="-parameters" />
       <module name="warehouse" options="-parameters" />
     </option>
   </component>
