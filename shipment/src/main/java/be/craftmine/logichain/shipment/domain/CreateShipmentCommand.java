@@ -1,6 +1,6 @@
-package be.craftmine.logichain.shipment.infrastructure;
+package be.craftmine.logichain.shipment.domain;
 
-public class ShipmentRequest {
+public class CreateShipmentCommand {
     private String deliveryAddress;
     private Long productId;
 
