@@ -1,0 +1,27 @@
+asyncapi: 3.0.0
+info:
+  title: LogiChain Events
+  version: 1.0.0
+channels:
+  carrier-topic:
+    address: carrier-topic
+    messages:
+      deliveryConfirmedEvent.message:
+        payload:
+          $ref: '#/components/schemas/DeliveryConfirmedEvent'
+    description: Event emitted when a route is optimized
+operations:
+  sendRouteOptimizedEvent:
+    action: receive
+    channel:
+      $ref: '#/channels/carrier-topic'
+    summary: Publish DeliveryConfirmedEvent
+    messages:
+      - $ref: '#/channels/carrier-topic/messages/deliveryConfirmedEvent.message'
+components:
+  schemas:
+    DeliveryConfirmedEvent:
+      type: object
+      properties:
+        shipmentId:
+          type: integer

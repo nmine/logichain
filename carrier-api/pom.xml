@@ -7,10 +7,9 @@
         <artifactId>root</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    <artifactId>route-api</artifactId>
+    <artifactId>carrier-api</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>route-api</name>
-    <description>route-api</description>
+    <name>carrier-api</name>
 
     <properties>
         <java.version>23</java.version>
@@ -42,7 +41,7 @@
                             <inputSpec>${project.basedir}/src/main/resources/asyncapi/contract.yaml
                             </inputSpec>
                             <configOptions>
-                                <modelPackage>be.craftmine.logichain.route.domain.events</modelPackage>
+                                <modelPackage>be.craftmine.logichain.carrier.domain.events</modelPackage>
                                 <jsonschema2pojo.includeTypeInfo>true</jsonschema2pojo.includeTypeInfo>
                                 <jsonschema2pojo.includeJsr303Annotations>false
                                 </jsonschema2pojo.includeJsr303Annotations>

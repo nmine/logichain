@@ -6,10 +6,10 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ShipmentService implements ShipmentPublisher {
+public class KafkaShipmentPublisher implements ShipmentPublisher {
     private final KafkaTemplate<String, ShipmentCreatedEvent> kafkaTemplate;
 
-    public ShipmentService(KafkaTemplate<String, ShipmentCreatedEvent> kafkaTemplate) {
+    public KafkaShipmentPublisher(KafkaTemplate<String, ShipmentCreatedEvent> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
     }
 
