@@ -19,6 +19,7 @@
         <option value="$PROJECT_DIR$/../../spw/asyncapi-example-main/pom.xml" />
         <option value="$PROJECT_DIR$/shipment-api/pom.xml" />
         <option value="$PROJECT_DIR$/route-api/pom.xml" />
+        <option value="$PROJECT_DIR$/carrier-api/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

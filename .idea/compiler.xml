@@ -13,6 +13,7 @@
         <module name="producer-service" />
         <module name="route-api" />
         <module name="warehouse" />
+        <module name="carrier-api" />
         <module name="consumer-service" />
         <module name="shipment-api" />
       </profile>
@@ -35,6 +36,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="carrier" options="-parameters" />
+      <module name="carrier-api" options="-parameters" />
       <module name="route" options="-parameters" />
       <module name="route-api" options="-parameters" />
       <module name="shared-kernel" options="" />
