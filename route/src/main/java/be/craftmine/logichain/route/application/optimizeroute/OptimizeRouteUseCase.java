@@ -1,6 +1,5 @@
-package be.craftmine.logichain.route.application;
+package be.craftmine.logichain.route.application.optimizeroute;
 
-import be.craftmine.logichain.route.domain.OptimizeRouteCommand;
 import be.craftmine.logichain.route.domain.RouteEventPublisher;
 import be.craftmine.logichain.route.domain.events.RouteOptimizedEvent;
 import org.springframework.stereotype.Service;

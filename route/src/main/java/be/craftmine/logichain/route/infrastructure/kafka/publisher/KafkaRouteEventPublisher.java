@@ -15,7 +15,7 @@ public class KafkaRouteEventPublisher implements RouteEventPublisher {
     }
 
     @Override
-    public void publish(RouteOptimizedEvent event) {
-        kafkaTemplate.send("route-topic", event);
+    public void publish(RouteOptimizedEvent routeOptimizedEvent) {
+        kafkaTemplate.send("route-topic", routeOptimizedEvent);
     }
 }

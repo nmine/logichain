@@ -1,4 +1,4 @@
-package be.craftmine.logichain.route.domain;
+package be.craftmine.logichain.route.application.optimizeroute;
 
 public class OptimizeRouteCommand {
     private Integer shipmentId;

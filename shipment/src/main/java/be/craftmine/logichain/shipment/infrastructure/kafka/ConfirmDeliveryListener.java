@@ -1,18 +1,17 @@
 package be.craftmine.logichain.shipment.infrastructure.kafka;
 
 import be.craftmine.logichain.carrier.domain.events.DeliveryConfirmedEvent;
-import be.craftmine.logichain.shipment.application.ConfirmDeliveryCommand;
-import be.craftmine.logichain.shipment.application.ConfirmDeliveryUseCase;
+import be.craftmine.logichain.shipment.application.confirmdelivery.ConfirmDeliveryCommand;
+import be.craftmine.logichain.shipment.application.confirmdelivery.ConfirmDeliveryUseCase;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DeliveryListener {
-
+public class ConfirmDeliveryListener {
 
     private ConfirmDeliveryUseCase confirmDeliveryUseCase;
 
-    public DeliveryListener(ConfirmDeliveryUseCase confirmDeliveryUseCase) {
+    public ConfirmDeliveryListener(ConfirmDeliveryUseCase confirmDeliveryUseCase) {
         this.confirmDeliveryUseCase = confirmDeliveryUseCase;
     }
 

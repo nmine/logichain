@@ -1,7 +1,7 @@
 package be.craftmine.logichain.carrier.infrastructure.kafka;
 
-import be.craftmine.logichain.carrier.application.DeliverShipmentCommand;
-import be.craftmine.logichain.carrier.application.DeliverShipmentUsecase;
+import be.craftmine.logichain.carrier.application.delivershipment.DeliverShipmentCommand;
+import be.craftmine.logichain.carrier.application.delivershipment.DeliverShipmentUsecase;
 import be.craftmine.logichain.route.domain.events.RouteOptimizedEvent;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;

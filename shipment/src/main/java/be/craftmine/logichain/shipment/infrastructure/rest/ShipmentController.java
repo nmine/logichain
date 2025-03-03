@@ -1,7 +1,7 @@
-package be.craftmine.logichain.shipment.infrastructure;
+package be.craftmine.logichain.shipment.infrastructure.rest;
 
-import be.craftmine.logichain.shipment.application.CreateShipmentUseCase;
-import be.craftmine.logichain.shipment.domain.CreateShipmentCommand;
+import be.craftmine.logichain.shipment.application.createshipment.CreateShipmentUseCase;
+import be.craftmine.logichain.shipment.application.createshipment.CreateShipmentCommand;
 import be.craftmine.logichain.shipment.domain.Shipment;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

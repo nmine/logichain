@@ -1,5 +1,6 @@
-package be.craftmine.logichain.carrier.application;
+package be.craftmine.logichain.carrier.application.delivershipment;
 
+import be.craftmine.logichain.carrier.domain.DeliveryConfirmedEvent;
 import be.craftmine.logichain.carrier.domain.DeliverRoutePublisher;
 import org.springframework.stereotype.Service;
 
