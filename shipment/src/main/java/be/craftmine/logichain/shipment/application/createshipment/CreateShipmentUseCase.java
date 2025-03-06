@@ -1,7 +1,7 @@
 package be.craftmine.logichain.shipment.application.createshipment;
 
 import be.craftmine.logichain.shipment.domain.ShipmentPublisher;
-import be.craftmine.logichain.shipment.domain.events.ShipmentCreatedEvent;
+import be.craftmine.logichain.shipment.domain.events.ShipmentCreated;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -14,7 +14,7 @@ public class CreateShipmentUseCase {
     }
 
     public void execute(CreateShipmentCommand command) {
-        ShipmentCreatedEvent shipmentCreatedEvent = new ShipmentCreatedEvent()
+        ShipmentCreated shipmentCreatedEvent = new ShipmentCreated()
                 .withDeliveryAddress(command.getDeliveryAddress())
                 .withProductId(command.getProductId().intValue());
         shipmentPublisher.publish(shipmentCreatedEvent);

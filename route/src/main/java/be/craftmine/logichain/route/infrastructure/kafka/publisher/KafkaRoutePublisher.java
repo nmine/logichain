@@ -6,11 +6,11 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 @Service
-public class KafkaRouteEventPublisher implements RouteEventPublisher {
+public class KafkaRoutePublisher implements RouteEventPublisher {
 
     private final KafkaTemplate kafkaTemplate;
 
-    public KafkaRouteEventPublisher(KafkaTemplate kafkaTemplate) {
+    public KafkaRoutePublisher(KafkaTemplate kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
     }
 

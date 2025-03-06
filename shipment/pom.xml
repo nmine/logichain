@@ -38,6 +38,10 @@
             <groupId>be.craftmine.logichain</groupId>
             <artifactId>carrier-api</artifactId>
         </dependency>
+        <dependency>
+            <groupId>be.craftmine.logichain</groupId>
+            <artifactId>route-api</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

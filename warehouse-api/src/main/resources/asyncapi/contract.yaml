@@ -1,0 +1,31 @@
+asyncapi: 3.0.0
+info:
+  title: LogiChain Events
+  version: 1.0.0
+channels:
+  warehouse-topic:
+    address: warehouse-topic
+    messages:
+      sendWarehouseStockReleased.message:
+        payload:
+          $ref: '#/components/schemas/WarehouseStockReleased'
+    description: Event emitted when warehouse stock is released
+operations:
+  sendWarehouseStockReleased:
+    action: receive
+    channel:
+      $ref: '#/channels/warehouse-topic'
+    summary: Publish WarehouseStockReleasedEvent
+    messages:
+      - $ref: '#/channels/warehouse-topic/messages/sendWarehouseStockReleased.message'
+components:
+  schemas:
+    WarehouseStockReleased:
+      type: object
+      properties:
+        shipmentId:
+          type: integer
+        warehouseId:
+          type: integer
+        status:
+          type: string

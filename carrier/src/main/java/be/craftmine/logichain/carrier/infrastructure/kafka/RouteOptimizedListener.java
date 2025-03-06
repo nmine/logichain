@@ -7,15 +7,15 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CarrierListener {
+public class RouteOptimizedListener {
     private DeliverShipmentUsecase deliverShipmentUsecase;
 
-    public CarrierListener(DeliverShipmentUsecase deliverShipmentUsecase) {
+    public RouteOptimizedListener(DeliverShipmentUsecase deliverShipmentUsecase) {
         this.deliverShipmentUsecase = deliverShipmentUsecase;
     }
 
-    @KafkaListener(topics = "shipment-topic", groupId = "carrier-group")
-    public void onShipmentCreated(RouteOptimizedEvent event) {
+    @KafkaListener(topics = "route-topic", groupId = "carrier-group")
+    public void onRouteOptimizedEvent(RouteOptimizedEvent event) {
         deliverShipmentUsecase.execute(
                 new DeliverShipmentCommand(event.getShipmentId())
         );

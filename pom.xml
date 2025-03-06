@@ -41,6 +41,11 @@
                 <artifactId>carrier-api</artifactId>
                 <version>1.0.0-SNAPSHOT</version>
             </dependency>
+            <dependency>
+                <groupId>be.craftmine.logichain</groupId>
+                <artifactId>warehouse-api</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

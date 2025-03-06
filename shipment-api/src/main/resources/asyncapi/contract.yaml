@@ -6,10 +6,13 @@ channels:
   shipment-topic:
     address: shipment-topic
     messages:
-      sendShipmentCreatedEvent.message:
+      sendShipmentCreated.message:
         payload:
-          $ref: '#/components/schemas/ShipmentCreatedEvent'
-    description: Event emitted when a shipment is created
+          $ref: '#/components/schemas/ShipmentCreated'
+      sendShipmentDeliveryConfirmed.message:
+        payload:
+          $ref: '#/components/schemas/ShipmentDeliveryConfirmed'
+    description: Event emitted when a shipment is created or delivery is confirmed
 operations:
   sendShipmentCreatedEvent:
     action: receive
@@ -17,10 +20,17 @@ operations:
       $ref: '#/channels/shipment-topic'
     summary: Publish ShipmentCreatedEvent
     messages:
-      - $ref: '#/channels/shipment-topic/messages/sendShipmentCreatedEvent.message'
+      - $ref: '#/channels/shipment-topic/messages/sendShipmentCreated.message'
+  sendShipmentDeliveryConfirmed:
+    action: receive
+    channel:
+      $ref: '#/channels/shipment-topic'
+    summary: Publish ShipmentDeliveryConfirmed
+    messages:
+      - $ref: '#/channels/shipment-topic/messages/sendShipmentDeliveryConfirmed.message'
 components:
   schemas:
-    ShipmentCreatedEvent:
+    ShipmentCreated:
       type: object
       properties:
         shipmentId:
@@ -28,6 +38,13 @@ components:
         deliveryAddress:
           type: string
         productId:
+          type: integer
+        status:
+          type: string
+    ShipmentDeliveryConfirmed:
+      type: object
+      properties:
+        shipmentId:
           type: integer
         status:
           type: string

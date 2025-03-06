@@ -1,8 +1,8 @@
 package be.craftmine.logichain.route.infrastructure.kafka.listener;
 
-import be.craftmine.logichain.route.application.optimizeroute.OptimizeRouteUseCase;
 import be.craftmine.logichain.route.application.optimizeroute.OptimizeRouteCommand;
-import be.craftmine.logichain.shipment.domain.events.ShipmentCreatedEvent;
+import be.craftmine.logichain.route.application.optimizeroute.OptimizeRouteUseCase;
+import be.craftmine.logichain.shipment.domain.events.ShipmentCreated;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
@@ -15,10 +15,8 @@ public class RouteOptimizationListener {
         this.optimizeRouteUseCase = optimizeRouteUseCase;
     }
 
-    //    Carrier Integration +Route Optimization →(Customer-Supplier)
-    //    Customer : Carrier Integration, car il dépend des itinéraires optimisés fournis par Route Optimization.
     @KafkaListener(topics = "shipment-topic", groupId = "route-optimization-group")
-    public void onShipmentCreated(ShipmentCreatedEvent event) {
+    public void onShipmentCreated(ShipmentCreated event) {
         // Optimize route and publish event
         optimizeRouteUseCase.execute(new OptimizeRouteCommand.Builder()
                 .withShipmentId(event.getShipmentId())

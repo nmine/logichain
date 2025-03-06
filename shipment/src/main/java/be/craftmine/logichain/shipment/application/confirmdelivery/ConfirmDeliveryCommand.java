@@ -1,7 +1,13 @@
 package be.craftmine.logichain.shipment.application.confirmdelivery;
 
 public class ConfirmDeliveryCommand {
-    public ConfirmDeliveryCommand(Integer shipmentId) {
+    private final Integer shipmentId;
 
+    public ConfirmDeliveryCommand(Integer shipmentId) {
+        this.shipmentId = shipmentId;
+    }
+
+    public Integer getShipmentId() {
+        return shipmentId;
     }
 }
