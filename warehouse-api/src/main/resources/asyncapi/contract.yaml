@@ -12,7 +12,7 @@ channels:
     description: Event emitted when warehouse stock is released
 operations:
   sendWarehouseStockReleased:
-    action: receive
+    action: send
     channel:
       $ref: '#/channels/warehouse-topic'
     summary: Publish WarehouseStockReleasedEvent
@@ -27,5 +27,13 @@ components:
           type: integer
         warehouseId:
           type: integer
-        status:
+        availableStock:
+          type: integer
+        timestamp:
           type: string
+        version:
+          type: string
+          description: "Event versioning to ensure compatibility."
+        traceId:
+          type: string
+          description: "Unique identifier for tracing the event across services."

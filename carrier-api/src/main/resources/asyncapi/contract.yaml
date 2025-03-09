@@ -11,8 +11,8 @@ channels:
           $ref: '#/components/schemas/DeliveryConfirmedEvent'
     description: Event emitted when a route is optimized
 operations:
-  sendRouteOptimizedEvent:
-    action: receive
+  deliveryConfirmedEvent:
+    action: send
     channel:
       $ref: '#/channels/carrier-topic'
     summary: Publish DeliveryConfirmedEvent
@@ -25,3 +25,6 @@ components:
       properties:
         shipmentId:
           type: integer
+        traceId:
+          type: string
+          description: "Unique identifier for tracing the event across services."

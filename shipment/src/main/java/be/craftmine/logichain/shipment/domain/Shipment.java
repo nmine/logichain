@@ -5,8 +5,7 @@ public class Shipment {
     private String deliveryAddress;
     private Long productId;
 
-    public Shipment(Long id, String deliveryAddress, Long productId) {
-        this.id = id;
+    public Shipment(String deliveryAddress, Long productId) {
         this.deliveryAddress = deliveryAddress;
         this.productId = productId;
     }

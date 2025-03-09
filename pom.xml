@@ -18,6 +18,7 @@
     <modules>
         <module>route-api</module>
         <module>shipment-api</module>
+        <module>warehouse-api</module>
         <module>carrier-api</module>
         <module>shipment</module>
         <module>route</module>
