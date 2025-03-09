@@ -1,5 +1,7 @@
 package be.craftmine.logichain.shipment.domain;
 
+import java.util.List;
+
 public class Shipment {
     private Long id;
     private String deliveryAddress;
@@ -32,6 +34,10 @@ public class Shipment {
 
     public void setProductId(Long productId) {
         this.productId = productId;
+    }
+
+    public static Shipment rebuildFromEvents(List<Object> events) {
+        return null;
     }
 
 

@@ -12,4 +12,9 @@ public class JpaShipmentRepository implements ShipmentRepository {
     public void save(Shipment shipment) {
         // Save shipment to database
     }
+
+    @Override
+    public Shipment findById(Integer id) {
+        return null;
+    }
 }
