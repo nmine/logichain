@@ -13,7 +13,7 @@ public class ConfirmDeliveryUseCase {
     private final ShipmentPublisher shipmentPublisher;
     private final ShipmentEventRepository shipmentEventRepository;
 
-    public ConfirmDeliveryUseCase(ShipmentPublisher shipmentPublisher, ShipmentEventRepository shipmentEventRepository {
+    public ConfirmDeliveryUseCase(ShipmentPublisher shipmentPublisher, ShipmentEventRepository shipmentEventRepository) {
         this.shipmentPublisher = shipmentPublisher;
         this.shipmentEventRepository = shipmentEventRepository;
     }
